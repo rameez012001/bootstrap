@@ -9,10 +9,10 @@ const products = [
   { users: 20, name: 'Pro', price: '$15.00 / mo' },
   { users: 30, name: 'Enterprise', price: '$29.00 / mo' },
 ];
-
+document.getElementById('cross').addEventListener('click',()=>{overlay.style.display='none';})
 function updateCardSelection(index) {
   cards.forEach((card, i) => {
-    card.style.border = i === index ? '3px solid lightgreen' : 'none';
+    card.style.border = i === index ? '3px solid #007bff' : 'none';
   });
   product.innerText = products[index].name;
   price.innerText = products[index].price;
